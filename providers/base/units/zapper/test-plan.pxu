@@ -16,6 +16,7 @@ include:
   monitor/zapper-edid
   usb/zapper-usb-insert-.*
   usb3/zapper-usb-insert-.*
+  suspend/zapper-wake-from-usb-keyboard
 bootstrap_include:
   desktop_session
   graphics_card
