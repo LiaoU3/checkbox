@@ -839,7 +839,7 @@ _verification:
  Did you hear the sound?
 plugin: user-interact-verify
 depends: audio/detect-playback-devices
-environ: ALSA_CONFIG_PATH ALSADEVICE
+environ: ALSA_CONFIG_PATH ALSADEVICE XDG_RUNTIME_DIR
 flags: also-after-suspend
 command: alsa_test playback -d 5
 category_id: com.canonical.plainbox::audio

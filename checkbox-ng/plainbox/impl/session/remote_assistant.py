@@ -298,6 +298,8 @@ class RemoteSessionAssistant:
                 extra_env["DBUS_SESSION_BUS_ADDRESS"] = (
                     "unix:path=/run/user/{}/bus".format(uid)
                 )
+            # alsa relevant tests on images with sound server requires $XDG_RUNTIME_DIR
+            extra_env["XDG_RUNTIME_DIR"] = "/run/user/{}".format(uid)
             if "WAYLAND_DISPLAY" in p_environ:
                 extra_env["WAYLAND_DISPLAY"] = p_environ["WAYLAND_DISPLAY"]
 
